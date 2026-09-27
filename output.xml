@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.14.3 on win32)" generated="2026-09-23T22:04:59.128469" rpa="false" schemaversion="5">
+<suite id="s1" name="Createaccounttests" source="C:\Users\Suresh\Bankingproject\Tests\Createaccounttests.robot">
+<test id="s1-t1" name="Account open using" line="11">
+<kw name="Fill the account form" owner="Createaccountkeywords">
+<kw name="Open account" owner="Createaccountspage">
+<kw name="Wait until the targeted element is visible" owner="Commonkeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-09-23T22:05:00.191484" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2026-09-23T22:05:00.191772" level="FAIL">No browser is open.</msg>
+<arg>${locator}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-09-23T22:05:00.190138" elapsed="0.072953">No browser is open.</status>
+</kw>
+<arg>${openaccountlink}</arg>
+<status status="FAIL" start="2026-09-23T22:05:00.188460" elapsed="0.075174">No browser is open.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${openaccountlink}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-09-23T22:05:00.264100" elapsed="0.000087"/>
+</kw>
+<status status="FAIL" start="2026-09-23T22:05:00.187749" elapsed="0.076741">No browser is open.</status>
+</kw>
+<kw name="Type of account" owner="Createaccountspage">
+<arg>${accounttype}</arg>
+<status status="NOT RUN" start="2026-09-23T22:05:00.264844" elapsed="0.000086"/>
+</kw>
+<kw name="Existing account selection" owner="Createaccountspage">
+<arg>${existaccount}</arg>
+<status status="NOT RUN" start="2026-09-23T22:05:00.265296" elapsed="0.000081"/>
+</kw>
+<kw name="Account submit" owner="Createaccountspage">
+<status status="NOT RUN" start="2026-09-23T22:05:00.265662" elapsed="0.000074"/>
+</kw>
+<arg>SAVINGS</arg>
+<arg>27552</arg>
+<status status="FAIL" start="2026-09-23T22:05:00.186629" elapsed="0.079321">No browser is open.</status>
+</kw>
+<status status="FAIL" start="2026-09-23T22:05:00.184481" elapsed="0.082432">No browser is open.</status>
+</test>
+<doc>This test suite is to test Parabank registration page</doc>
+<status status="FAIL" start="2026-09-23T22:04:59.134057" elapsed="1.135924"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Createaccounttests" id="s1" pass="0" fail="1" skip="0">Createaccounttests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
