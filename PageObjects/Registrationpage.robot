@@ -67,7 +67,6 @@ Click Register
 Verify user creation
     ${printmessage}=    Wait until the page contains message    ${sucessmessage}    ${sucessmessagelocator}
     Log To Console      ${printmessage}
-    #Log To Console      Registration successful
 Logout
     Wait until the targeted element is visible    ${logoutfield}
     Click Element                                 ${logoutfield}

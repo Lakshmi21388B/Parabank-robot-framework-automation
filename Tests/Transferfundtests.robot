@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    This PO file containing locators for Parabank registration page
+Documentation    This PO file containing locators for Parabank Transferfund page
 Library          SeleniumLibrary
 Resource         ../Resources/Commonkeywords.robot
 Resource         ../Resources/Transferfundkeywords.robot

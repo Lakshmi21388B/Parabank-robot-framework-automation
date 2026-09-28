@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    This test suite is to test Parabank account creation page
+Documentation    This test suite is to test Parabank end to end workflow test page
 Library          SeleniumLibrary
 Resource         ../Resources/Commonkeywords.robot
 Resource         ../Resources/Registerkeywords.robot

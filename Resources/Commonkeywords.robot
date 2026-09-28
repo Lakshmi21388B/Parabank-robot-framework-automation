@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    This resource file containing keywords for Parabank registration page
+Documentation    This resource file containing common keywords for Parabank automation
 Library          SeleniumLibrary
 
 
@@ -14,9 +14,9 @@ ${state}              Tamilnadu
 ${zipcode}            600001
 ${phone}              9345689000
 ${SSN}                1A1
-${username}           Winning19
-${password}           horse19
-${repeatpassword}     horse19
+${username}           Winning21
+${password}           horse21
+${repeatpassword}     horse21
 
 *** Keywords ***
 Launch Browser

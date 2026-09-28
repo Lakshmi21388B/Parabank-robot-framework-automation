@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    This resource file containing keywords for OrangeHRM login page
+Documentation    This resource file containing keywords for Register page
 Library          SeleniumLibrary
 Resource         ../Resources/Commonkeywords.robot
 Resource         ../PageObjects/Registrationpage.robot
