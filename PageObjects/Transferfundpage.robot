@@ -5,12 +5,14 @@ Resource         ../Resources/Commonkeywords.robot
 Resource         ../PageObjects/Createaccountspage.robot
 
 *** Variables ***
-${transferlink}       xpath=//a[normalize-space()='Transfer Funds']
-${amountfield}        //input[@id='amount']
-${fromaccountfield}   //select[@id='fromAccountId']
-${toaccountfield}    //select[@id='toAccountId']
-${transfer}          xpath:(//input[@value='Transfer'])[1]
-
+${transferlink}               xpath=//a[normalize-space()='Transfer Funds']
+${amountfield}                //input[@id='amount']
+${fromaccountfield}           //select[@id='fromAccountId']
+${toaccountfield}             //select[@id='toAccountId']
+${transfer}                   xpath:(//input[@value='Transfer'])[1]
+${transfersuccesslocator}     xpath=//*[contains(text(),'Transfer Complete!')]
+${transfersuccess}            Transfer Complete!
+   
 *** Keywords ***
 Go to transfer link
     Sleep    2
@@ -29,6 +31,10 @@ Enter toaccountid
     Select From List By Index           ${toaccountfield}       ${toaccountid}
 Transfer amount
     Click Button        ${transfer}
+Validating transfer status
+    ${transfermessage}=     Wait until the page contains message   ${transfersuccess}    ${transfersuccesslocator}
+    Log To Console    ${transfermessage}
+
     
 
 

@@ -17,7 +17,6 @@ ${registrationusername_field}           xpath://input[@id='customer.username']
 ${registrationpassword_field}           xpath://input[@id='customer.password']
 ${confirm_field}            xpath://input[@id='repeatedPassword']
 ${Register}                 xpath://input[@value='Register']
-#${repeatedpassworderror}    id:repeatedPassword.errors 
 ${sucessmessage}            Your account was created successfully. You are now logged in.
 ${sucessmessagelocator}     xpath://p[contains(text(),'Your account was created successfully. You are now')]  
 ${logoutfield}              //a[contains(text(),'Log Out')]
@@ -53,28 +52,22 @@ Enter SSN
     Input Text      ${SSN_field}    ${SSN}   
 Enter username 
     [Arguments]     ${username}
-    Wait Until Page Contains Element               ${registrationusername_field}    10s
-    #Wait until the targeted element is visible     ${username_field}
-    #Click Element    ${username_field}
+    Wait until page contains required element        ${registrationusername_field}
     Input Text      ${registrationusername_field}    ${username} 
 Enter password      
     [Arguments]     ${password}
-    Wait Until Page Contains Element    ${registrationpassword_field} 
-    #Wait until the targeted element is visible     ${password_field} 
-    #Click Element    ${password_field} 
+    Wait until page contains required element    ${registrationpassword_field} 
     Input Password  ${registrationpassword_field}     ${password} 
 Enter repeatpassword   
     [Arguments]     ${repeatpassword}
-    Wait Until Page Contains Element    ${confirm_field}
-    #Wait until the targeted element is visible     ${confirm_field} 
-    #Click Element    ${confirm_field}  
+    Wait until page contains required element    ${confirm_field}
     Input Password  ${confirm_field}    ${repeatpassword}  
 Click Register
     Click Button        ${Register} 
 Verify user creation
     ${printmessage}=    Wait until the page contains message    ${sucessmessage}    ${sucessmessagelocator}
     Log To Console      ${printmessage}
-    Log To Console      Registration successful
+    #Log To Console      Registration successful
 Logout
     Wait until the targeted element is visible    ${logoutfield}
     Click Element                                 ${logoutfield}

@@ -14,9 +14,9 @@ ${state}              Tamilnadu
 ${zipcode}            600001
 ${phone}              9345689000
 ${SSN}                1A1
-${username}           Winning15
-${password}           horse15
-${repeatpassword}     horse15
+${username}           Winning19
+${password}           horse19
+${repeatpassword}     horse19
 
 *** Keywords ***
 Launch Browser
@@ -39,6 +39,10 @@ Close the Browser
 Wait until the targeted element is visible
     [Arguments]    ${locator}
     Wait Until Element Is Visible       ${locator}    10s  
+
+Wait until page contains required element
+    [Arguments]    ${element}
+    Wait Until Page Contains Element    ${element}    10s
 
 Wait until the page contains message
     [Arguments]    ${message}    ${messagelocator}

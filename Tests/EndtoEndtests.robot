@@ -13,9 +13,11 @@ Suite Teardown   Close the Browser
 User registration
     Fill the registration form       ${firstname}     ${lastname}    ${address}    ${city}    ${state}     ${zipcode}   ${phone}    ${SSN}    ${username}    ${password}    ${repeatpassword}
 Login with registered user
-   Fill the login form            ${username}    ${password} 
+    Fill the login form            ${username}    ${password}
+    Logout
 Account opening for registered user
-     Fill the account form         ${username}    ${password}     0    0
+    Fill the account form         ${username}    ${password}     0    0
+    Logout
 Fund Transfer
-     Transfer the fund        ${username}      ${password}     1000    0    0
+    Transfer the fund        ${username}      ${password}     10    0    0
        

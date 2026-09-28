@@ -8,5 +8,6 @@ Suite Teardown   Close the Browser
 
 *** Test Cases ***
 Send amount from one account to another account using
-    Transfer the fund     ${username}    ${password}    1000    0    0
+    ${amount}=     Set Variable    20    
+    Transfer the fund     ${username}    ${password}    ${amount}    0    0
     
